@@ -1,0 +1,128 @@
+/* =========================
+   PAGE STYLING
+========================= */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+}
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+
+.container {
+    background-color: white;
+
+    width: 400px;
+
+    padding: 30px;
+
+    border-radius: 12px;
+
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+
+    text-align: center;
+}
+
+/* =========================
+   TITLE
+========================= */
+
+h1 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* =========================
+   ASSIGNMENT CARD
+========================= */
+
+.assignment-card {
+    border: 1px solid #ddd;
+
+    padding: 20px;
+
+    border-radius: 10px;
+
+    background-color: #fafafa;
+}
+
+/* =========================
+   TEXT
+========================= */
+
+p {
+    color: #555;
+    font-size: 16px;
+}
+
+/* =========================
+   TIMER
+========================= */
+
+#timer {
+    margin-top: 10px;
+
+    font-weight: bold;
+
+    color: #0077cc;
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+button {
+    width: 100%;
+
+    padding: 12px;
+
+    margin-top: 15px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background-color: #28a745;
+
+    color: white;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+/* Hover effect */
+
+button:hover {
+    background-color: #218838;
+}
+
+/* Disabled button */
+
+button:disabled {
+    background-color: gray;
+
+    cursor: not-allowed;
+}
+
+/* =========================
+   STATUS MESSAGE
+========================= */
+
+#statusText {
+    margin-top: 15px;
+
+    font-weight: bold;
+}

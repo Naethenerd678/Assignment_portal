@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mini Assignment Portal</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      padding-top: 50px;
+    }
+
+    .container {
+      background: white;
+      padding: 25px;
+      width: 350px;
+      border-radius: 10px;
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .assignment {
+      margin-top: 20px;
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+    }
+
+    button {
+      margin-top: 10px;
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      background-color: #4CAF50;
+      color: white;
+      font-size: 16px;
+    }
+
+    button:disabled {
+      background-color: gray;
+      cursor: not-allowed;
+    }
+
+    .status {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>Student Portal</h1>
+
+    <div class="assignment">
+      <h3>Web Development Assignment</h3>
+
+      <p>Due: May 9th at 11:59 PM</p>
+
+      <button id="submitBtn">Submit Assignment</button>
+
+      <div class="status" id="statusText"></div>
+    </div>
+  </div>
+
+  <script>
+// CHANGE THIS DATE TO TEST
+  const dueDate = new Date("2026-05-09T23:59:00");
+
+    const submitBtn = document.getElementById("submitBtn");
+    const statusText = document.getElementById("statusText");
+
+    // Check if assignment is overdue
+    if (new Date() > dueDate) {
+      submitBtn.disabled = true;
+      statusText.textContent = "Submission Closed";
+      statusText.style.color = "red";
+    }
+
+    // Fake submission
+    submitBtn.addEventListener("click", () => {
+      statusText.textContent = "Assignment Submitted Successfully!";
+      statusText.style.color = "green";
+    });
+  </script>
+
+</body>
+</html>
